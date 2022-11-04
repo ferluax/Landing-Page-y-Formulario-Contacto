@@ -24,18 +24,11 @@ Route::get('/landingpage', function () {
 
 Route::get('/landingpage', [PaginaController::class, 'landingpage']);
 
+Route::get('/prueba', [PaginaController::class, 'prueba']);
+
+Route::post('/recibeFormContacto', [PaginaController::class, 'recibeFormContacto']);
+
 Route::get('/contacto/{version_id?}', [PaginaController::class, 'contacto']);
 
-/*Route::get('/contacto/{version_id?}', function ($version_id = null) {
-
-    $versiones = 1234;
-
-    if (!empty($version_id)){
-        $version = $versiones;
-    } else{
-        $version = null;
-    }
-
-    return view('contacto', compact('versiones', 'version'));
-});*/
+Route::get('/precios/{cupon?}', [PaginaController::class, 'precios']);
 
